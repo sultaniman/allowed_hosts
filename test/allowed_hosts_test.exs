@@ -11,10 +11,7 @@ defmodule AllowedHostsTest do
 
   test "passes for known allowed hosts" do
     allowed_hosts = AllowedHosts.init(["127.0.0.1"])
-
-    conn = conn(:get, "http://127.0.0.1/")
-           |> send_resp(200, "ok")
-
+    conn = conn(:get, "http://127.0.0.1/") |> send_resp(200, "ok")
     conn = AllowedHosts.call(conn, allowed_hosts)
 
     assert conn.state == :sent
@@ -23,9 +20,7 @@ defmodule AllowedHostsTest do
 
   test "fails for unknown allowed hosts" do
     allowed_hosts = AllowedHosts.init(["127.0.0.1"])
-
-    conn = conn(:get, "/")
-           |> send_resp(200, "ok")
+    conn = conn(:get, "/") |> send_resp(200, "ok")
 
     assert_raise Plug.Conn.AlreadySentError, ~r/already sent/, fn ->
       AllowedHosts.call(conn, allowed_hosts)
