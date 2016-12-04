@@ -52,7 +52,7 @@ defmodule AllowedHosts.Mixfile do
 
   defp package do
     [
-      files: ~w(lib mix.exs README.md LICENSE.md CHANGELOG.md),
+      files: ~w(lib mix.exs README.md LICENSE CHANGELOG.md),
       maintainers: ["Sultan Iman"],
       licenses: ["MIT"],
       links: %{
