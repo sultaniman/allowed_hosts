@@ -24,7 +24,6 @@ defmodule AllowedHostsTest do
 
     assert_raise Plug.Conn.AlreadySentError, ~r/already sent/, fn ->
       AllowedHosts.call(conn, allowed_hosts)
-      assert String.match?(conn.resp_body, ~r/Bad request/)
     end
   end
 end
