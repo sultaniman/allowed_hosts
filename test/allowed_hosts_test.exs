@@ -9,7 +9,7 @@ defmodule AllowedHostsTest do
     assert ["*"] == AllowedHosts.init(nil)
   end
 
-  test "passes for empty values for allowed hosts" do
+  test "passes for known allowed hosts" do
     allowed_hosts = AllowedHosts.init(["127.0.0.1"])
 
     conn = conn(:get, "http://127.0.0.1/")
@@ -22,9 +22,6 @@ defmodule AllowedHostsTest do
   end
 
   test "fails for unknown allowed hosts" do
-    assert ["*"] == AllowedHosts.init([])
-    assert ["*"] == AllowedHosts.init(nil)
-
     allowed_hosts = AllowedHosts.init(["127.0.0.1"])
 
     conn = conn(:get, "/")

@@ -19,10 +19,9 @@ end
 ```elixir
 pipeline :browser do
   plug AllowedHosts, ["example.com", "example2.com"]
-  ...
 end
 ```
 
 ## TODO
 
-* Add tests.
+* Add more tests.
