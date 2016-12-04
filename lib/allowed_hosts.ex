@@ -1,5 +1,5 @@
 defmodule AllowedHosts do
-	import Plug.Conn, only: [send_resp: 3]
+  import Plug.Conn, only: [send_resp: 3]
 
   @allow_all ["*"]
 

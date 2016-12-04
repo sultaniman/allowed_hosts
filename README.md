@@ -1,24 +1,24 @@
 # AllowedHosts
 
-**TODO: Add description**
+This [Elixir](http://elixir-lang.org/) [plug](https://github.com/elixir-lang/plug) protects your APIs from [Host header attack](https://www.acunetix.com/vulnerabilities/web/host-header-attack).
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+To use the plug in your projects, edit your mix.exs file and add the project as a dependency:
 
-  1. Add `allowed_hosts` to your list of dependencies in `mix.exs`:
+```elixir
+defp deps do
+  [
+    {:allowed_hosts, "~> 0.1.0"}
+  ]
+end
+```
 
-    ```elixir
-    def deps do
-      [{:allowed_hosts, "~> 0.1.0"}]
-    end
-    ```
+## Usage
 
-  2. Ensure `allowed_hosts` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:allowed_hosts]]
-    end
-    ```
-
+```elixir
+pipeline :browser do
+  plug AllowedHosts, ["example.com", "example2.com"]
+  ...
+end
+```
