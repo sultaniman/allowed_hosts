@@ -1,6 +1,6 @@
 # AllowedHosts
 
-This [Elixir](http://elixir-lang.org/) [plug](https://github.com/elixir-lang/plug) protects your APIs from [Host header attack](https://www.acunetix.com/vulnerabilities/web/host-header-attack).
+This [Elixir](http://elixir-lang.org/) [plug](https://github.com/elixir-lang/plug) protects your resources and APIs from [Host header attack](https://www.acunetix.com/vulnerabilities/web/host-header-attack).
 
 ## Installation
 
