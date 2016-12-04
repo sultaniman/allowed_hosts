@@ -1,14 +1,14 @@
 defmodule AllowedHosts do
-	@moduledoc """
-	This plug protects your websites and APIs from "Host header attack".
+  @moduledoc """
+  This plug protects your websites and APIs from "Host header attack".
 
-	## Example
+  ## Example
 
     pipeline :browser do
       plug AllowedHosts, ["example.com", "example2.com"]
     end
 
-	"""
+  """
   import Plug.Conn, only: [send_resp: 3]
 
   @allow_all ["*"]

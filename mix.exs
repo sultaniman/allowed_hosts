@@ -46,7 +46,7 @@ defmodule AllowedHosts.Mixfile do
 
   defp description do
     """
-    An elixir plug which checks HTTP_HOST header of request against `allowed_hosts`.
+    Elixir plug to protect your APIs from Host header attacks.
     """
   end
 
