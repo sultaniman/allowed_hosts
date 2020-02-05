@@ -1,7 +1,7 @@
 defmodule AllowedHosts.Mixfile do
   use Mix.Project
 
-  @vsn "0.1.1"
+  @vsn "0.1.2"
 
   @package [
     files: ~w(lib mix.exs README.md LICENSE CHANGELOG.md),
@@ -33,7 +33,7 @@ defmodule AllowedHosts.Mixfile do
       start_permanent: Mix.env == :prod,
       package: @package,
       description: @description,
-      docs: [extras: ~W(README.md CHANGELOG.md)],
+      docs: [extras: ~w(README.md CHANGELOG.md)],
       deps: @deps
     ]
   end
