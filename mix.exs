@@ -1,7 +1,7 @@
 defmodule AllowedHosts.Mixfile do
   use Mix.Project
 
-  @vsn "0.1.0"
+  @vsn "0.1.1"
 
   @package [
     files: ~w(lib mix.exs README.md LICENSE CHANGELOG.md),
