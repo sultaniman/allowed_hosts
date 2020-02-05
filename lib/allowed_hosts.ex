@@ -22,7 +22,7 @@ defmodule AllowedHosts do
   def call(conn, nil), do: conn
   def call(conn, @allow_all), do: conn
 
-  def call(conn, hosts) when hosts |> is_list do
+  def call(conn, hosts) when is_list(hosts) do
     unless Enum.member?(hosts, conn.host) do
       conn
       |> send_resp(400, "Bad request")
